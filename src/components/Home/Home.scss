@@ -6,7 +6,7 @@
 }
 
 /* For small screens (2 columns) */
-@media (max-width: 768px) and (min-width: 480px) {
+@media (max-width: 768px) and (min-width: 340px) {
     .pokemon-grid {
         grid-template-columns: repeat(4, 1fr);
         justify-items: center;
@@ -23,7 +23,7 @@
 
 
 /* For small screens (2 columns) */
-@media (max-width: 768px) and (min-width: 480px) {
+@media (max-width: 768px) and (min-width: 340px) {
     .pokemon-grid {
         grid-template-columns: repeat(2, 1fr);
         justify-items: center;
@@ -32,7 +32,7 @@
 
 
 /* For tiny screens (1 column) */
-@media (max-width: 480px) {
+@media (max-width: 340px) {
     .pokemon-grid {
         grid-template-columns: 1fr;
         justify-items: center;
