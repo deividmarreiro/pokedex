@@ -1,13 +1,13 @@
 # Pokedex
 
-Este projeto é uma Pokédex desenvolvida como parte dos meus estudos em **React** com **TypeScript**. O design base foi retirado deste [projeto no Figma](https://www.figma.com/community/file/979132880663340794), criado pelo **Ricardo Schiniegoski**. 
+This project is a Pokédex developed as part of my studies in **React** with **TypeScript**. The base design was taken from this [Figma project](https://www.figma.com/community/file/979132880663340794), created by **Ricardo Schiniegoski**. 
 
-Embora tenha feito algumas alterações no design para atender às necessidades do meu projeto, todos os direitos do design original permanecem com o autor.
+Although I made some adjustments to the design to meet my project needs, all rights to the original design remain with the author.
 
-## Objetivo do Projeto
+## Project Objective
 
-O principal objetivo deste projeto foi consolidar meus conhecimentos em React e TypeScript. Além disso, serviu como uma oportunidade para trabalhar com um design profissional e adaptá-lo às funcionalidades necessárias.
+The main goal of this project was to consolidate my knowledge of React and TypeScript. Additionally, it served as an opportunity to work with a professional design and adapt it to the required functionalities.
 
-## Uso e Inspiração
+## Usage and Inspiration
 
-Se você deseja usar este projeto como base ou inspiração para seus próprios projetos, fique à vontade! Apenas lembre-se de dar os devidos créditos ao design original e a este repositório, se for o caso.
+If you wish to use this project as a base or inspiration for your own projects, feel free! Just remember to give proper credit to the original design and this repository, if applicable.
