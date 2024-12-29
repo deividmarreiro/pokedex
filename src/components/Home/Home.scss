@@ -1,5 +1,40 @@
 .pokemon-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    gap: 10px;
+    gap: 16px;
+    justify-items: center;    
+}
+
+/* For small screens (2 columns) */
+@media (max-width: 768px) and (min-width: 480px) {
+    .pokemon-grid {
+        grid-template-columns: repeat(4, 1fr);
+        justify-items: center;
+    }
+}
+
+/* For medium screens (3 columns) */
+@media (max-width: 1024px) and (min-width: 768px) {
+    .pokemon-grid {
+        grid-template-columns: repeat(3, 1fr);
+        justify-items: center;
+    }
+}
+
+
+/* For small screens (2 columns) */
+@media (max-width: 768px) and (min-width: 480px) {
+    .pokemon-grid {
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+    }
+}
+
+
+/* For tiny screens (1 column) */
+@media (max-width: 480px) {
+    .pokemon-grid {
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
 }
