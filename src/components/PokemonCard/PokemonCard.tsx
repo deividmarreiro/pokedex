@@ -7,11 +7,8 @@ interface PokemonCardProps {
 }
 
 function PokemonCard({ pokemon }: PokemonCardProps) {
-    onclick = () => {
-        console.log("Pokemon clicked");
-    };
     return (
-        <div className="pokemon-card" onClick={() => onclick}>
+        <div className="pokemon-card">
             <div className="pokemon-card-header">
                 <span className="pokemon-id">{pokemon.id}</span>
             </div>
