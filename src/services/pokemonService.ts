@@ -1,4 +1,4 @@
-import { PokemonAbility, PokemonData, PokemonType } from "../types/Pokemon";
+import { PokemonData } from "../types/Pokemon";
 
 export async function fetchPokemonDetails(
     pokemonId: number
@@ -11,11 +11,33 @@ export async function fetchPokemonDetails(
     const mappedData: PokemonData = {
         id: data.id,
         name: data.name,
-        types: data.types.map((type: PokemonType) => type.type.name),
+        types: data.types.map(
+            (typeObj: {
+                slot: number;
+                type: { name: string; url: string };
+            }) => ({
+                slot: typeObj.slot,
+                type: {
+                    name: typeObj.type.name,
+                    url: typeObj.type.url,
+                },
+            })
+        ),
         weight: data.weight,
         height: data.height,
         abilities: data.abilities.map(
-            (ability: PokemonAbility) => ability.ability.name
+            (abilityObj: {
+                ability: { name: string; url: string };
+                is_hidden: boolean;
+                slot: number;
+            }) => ({
+                ability: {
+                    name: abilityObj.ability.name,
+                    url: abilityObj.ability.url,
+                },
+                is_hidden: abilityObj.is_hidden,
+                slot: abilityObj.slot,
+            })
         ),
         description: "",
         base_stats: {
