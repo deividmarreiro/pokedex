@@ -5,26 +5,84 @@ $grayscale-medium: #666666;
 $grayscale-light: #E0E0E0;
 $grayscale-background: #EFEFEF;
 $grayscale-white: #FFFFFF;
+// Colors:
+$title-color: #FFCB06;
+$title-stroke-color: #3B5CA8;
+$title-shadow-color: #1D2C5E;
 
 // Colors: Pokemon Type Colors
-$type-bug: #A7B723;
-$type-dark: #707070;
-$type-dragon: #7037FF;
-$type-electric: #F9CF30;
-$type-fairy: #E69EAC;
-$type-fighting: #C12239;
-$type-fire: #F57D31;
-$type-flying: #A891EC;
-$type-ghost: #70559B;
-$type-normal: #AAA67F;
-$type-grass: #74CB48;
-$type-ground: #DEC16B;
-$type-ice: #9AD6DF;
-$type-poison: #A43E9E;
-$type-psychic: #FB5584;
-$type-rock: #B69E31;
-$type-steel: #B7B9D0;
-$type-water: #6493EB;
+$type-default-bug-color: #A7B723;
+$type-default-dark-color: #707070;
+$type-default-dragon-color: #7037FF;
+$type-default-electric-color: #F9CF30;
+$type-default-fairy-color: #E69EAC;
+$type-default-fighting-color: #C12239;
+$type-default-fire-color: #F57D31;
+$type-default-flying-color: #A891EC;
+$type-default-ghost-color: #70559B;
+$type-default-normal-color: #AAA67F;
+$type-default-grass-color: #74CB48;
+$type-default-ground-color: #DEC16B;
+$type-default-ice-color: #9AD6DF;
+$type-default-poison-color: #A43E9E;
+$type-default-psychic-color: #FB5584;
+$type-default-rock-color: #B69E31;
+$type-default-steel-color: #B7B9D0;
+$type-default-water-color: #6493EB;
+
+$type-default-bug-background: #6D7E19;
+$type-default-bug-text: #C3D946;
+
+$type-default-dark-background: #4B4B4B;
+$type-default-dark-text: #909090;
+
+$type-default-dragon-background: #4B23A1;
+$type-default-dragon-text: #8A5FFF;
+
+$type-default-electric-background: #B98D20;
+$type-default-electric-text: #FFE45C;
+
+$type-default-fairy-background: #A46471;
+$type-default-fairy-text: #F0BCC7;
+
+$type-default-fighting-background: #841828;
+$type-default-fighting-text: #E14356;
+
+$type-default-fire-background: #A6501F;
+$type-default-fire-text: #FF9A5C;
+
+$type-default-flying-background: #7163A7;
+$type-default-flying-text: #C1B2F4;
+
+$type-default-ghost-background: #4B3967;
+$type-default-ghost-text: #8E74B2;
+
+$type-default-normal-background: #7C7859;
+$type-default-normal-text: #C4C1A1;
+
+$type-default-grass-background: #4C812E;
+$type-default-grass-text: #8BE660;
+
+$type-default-ground-background: #A3894A;
+$type-default-ground-text: #EAD089;
+
+$type-default-ice-background: #619EA4;
+$type-default-ice-text: #B4E5EA;
+
+$type-default-poison-background: #732A71;
+$type-default-poison-text: #C761BF;
+
+$type-default-psychic-background: #B83B5E;
+$type-default-psychic-text: #FF88A6;
+
+$type-default-rock-background: #7F7223;
+$type-default-rock-text: #D1BC5D;
+
+$type-default-steel-background: #828595;
+$type-default-steel-text: #D1D3E3;
+
+$type-default-water-background: #4263A4;
+$type-default-water-text: #8AB0F5;
 
 // Typography
 $font-family: 'Poppins', sans-serif;
