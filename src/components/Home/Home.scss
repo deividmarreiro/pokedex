@@ -1,40 +1,22 @@
+@use '../../styles/variables.scss' as *;
+
+.home-title {
+    font-family: Pokemon Solid, sans-serif;
+    color: $title-color;
+    -webkit-text-stroke: 3px $title-stroke-color;
+    text-shadow: -1px 0px 0px $title-shadow-color;;
+
+    text-align: center;
+    font-size: $headline-font-size;
+
+    @media (min-width: 768px) {
+        font-size: calc($headline-font-size * 2.5);
+    }
+}
+
 .pokemon-grid {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 16px;
-    justify-items: center;    
-}
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
 
-/* For small screens (2 columns) */
-@media (max-width: 768px) and (min-width: 340px) {
-    .pokemon-grid {
-        grid-template-columns: repeat(4, 1fr);
-        justify-items: center;
-    }
-}
-
-/* For medium screens (3 columns) */
-@media (max-width: 1024px) and (min-width: 768px) {
-    .pokemon-grid {
-        grid-template-columns: repeat(3, 1fr);
-        justify-items: center;
-    }
-}
-
-
-/* For small screens (2 columns) */
-@media (max-width: 768px) and (min-width: 340px) {
-    .pokemon-grid {
-        grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-    }
-}
-
-
-/* For tiny screens (1 column) */
-@media (max-width: 340px) {
-    .pokemon-grid {
-        grid-template-columns: 1fr;
-        justify-items: center;
-    }
 }

@@ -40,7 +40,7 @@ function Home() {
 
     return (
         <>
-            <h1 className="page-title">Pokédex</h1>
+            <h1 className="home-title">Pokédex</h1>
             {loading && <p>Loading...</p>}
             {error && <p>{error}</p>}
             <div className="pokemon-grid">
@@ -49,7 +49,9 @@ function Home() {
                 ))}
             </div>
             {!loading && (
-                <button onClick={loadNextPage}>Load More Pokémons</button>
+                <button onClick={loadNextPage} disabled={loading}>
+                    Load More Pokémons
+                </button>
             )}
         </>
     );
