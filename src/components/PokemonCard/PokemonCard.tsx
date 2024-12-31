@@ -10,10 +10,11 @@ function PokemonCard({ pokemon }: PokemonCardProps) {
     return (
         <div className={`pokemon-card ${pokemon.types[0].type.name}`}>
             <div className="pokemon-info">
-                <h2 className="pokemon-name">{pokemon.name}</h2>
                 <p className="pokemon-national-number">{`#${String(
                     pokemon.id
                 ).padStart(3, "0")}`}</p>
+                <h2 className="pokemon-name">{pokemon.name}</h2>
+
                 <ul className="pokemon-types">
                     {pokemon.types.map((typeObj) => (
                         <li
@@ -30,6 +31,7 @@ function PokemonCard({ pokemon }: PokemonCardProps) {
                     ))}
                 </ul>
             </div>
+            <div className="pokeball-bg"></div>
             <img
                 className="pokemon-image"
                 src={pokemon.image}
