@@ -1,13 +1,18 @@
-@import '../../styles/_variables.scss';
+@use '../../styles/variables.scss' as *;
 
 .pokemon-card {
-    background-color: $grayscale-white;
-    border-radius: 8px;
-    width: 106px;
-    height: 108px;
+    display: flex;
     overflow: hidden;
-    position: relative;
+    flex: 1 1 calc(33.33% - 40px); /* Cada card ocupa 1/3 da largura menos o gap */
+    max-width: calc(33.33% - 40px);
+    border-radius: 10px;
+    max-height: 200px;
+    padding: .5vw;
+    justify-content: space-between;
+    cursor: pointer;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
 
     &:hover {
         transform: scale(1.05);
@@ -19,79 +24,182 @@
         transform: translate(-50%) scale(1.1); /* Aumenta levemente a imagem no hover */
     }
 
-    .pokemon-card-header {
-        position: absolute;
-        right: 0;
-        display: flex;
+    @media (max-width: 1024px) {
+        flex: 1 1 calc(50% - 40px); /* 2 cards por linha */
+        max-width: calc(50% - 40px);
+    }
 
-        .pokemon-id {
-            font-family: $font-family;
-            color: $grayscale-medium;
-            font-size: $body-caption-font-size;
-            margin: 4px 8px 0 0;
-        }
+    @media (max-width: 768px) {
+        flex: 1 1 calc(100% - 40px); /* 1 card por linha */
+        max-width: calc(100% - 40px);
     }
 
     .pokemon-image {
-        position: relative;
-        top: 16px;
-
-        img {
-            position: absolute;
-            width: 70%;
-            transform: translate(-50%);
-            z-index: 10;
-            transition: transform 0.3 ease;
-        }
+        width: 30%;
+        height: 100%;
+        object-fit: cover;
     }
 
-    .pokemon-card-footer {
+    .pokeball-bg {
         position: absolute;
-        top: 64px;
-        bottom: 0;
-        left: 0;
+        top: 45%;
         right: 0;
-        background-color: $grayscale-background;
+        width: 40%;
+        z-index: -1;
+        overflow: hidden;
+        transform: translate(0, -50%);
+    }
+
+    .pokemon-types {
         display: flex;
-        justify-content: end;
-        flex-direction: column;
-        border-radius: 7px;
+        list-style: none;
+        gap: 10px;
+        align-items: center;
 
-        .pokemon-name {
-            font-family: $font-family;
-            color: $grayscale-dark;
-            font-size: $body3-font-size;
-            padding: 24px 8px 4px 8px;
-        }
-    }
+        .type-icon-container {
+            width: 20px;
+            height: 20px;
 
-    // Media Query to web version
-    @media (min-width: 768px) {
-        width: 250px;
-        height: 300px;
-
-        .pokemon-card-header {
-            .pokemon-id {
-                font-size: calc($body-caption-font-size * 2.5);
-                line-height: calc($body-caption-font-size * 2.5);
-                margin: 8px 16px 0 0;
-            }
-        }
-
-        .pokemon-image {
-            top: 32px;
             img {
-                width: 80%;
+                width: 100%;
+                height: 100%;
             }
         }
 
-        .pokemon-card-footer {
-            top: 180px;
-            .pokemon-name {
-                font-size: calc($body3-font-size * 2.5);
-                line-height: calc($body3-font-size * 1.5);
-                padding: 38px 16px 12px 16px;
-            }
+        .pokemon-type {
+            display: flex;
+            gap: 4px;
+            padding: 3px 7px;
+            font-size: $subtitle1-font-size;
+            border-radius: 50px;
+            text-align: center;
+            color: $grayscale-white;
         }
     }
+}
+
+.pokemon-card.bug {
+    background-color: $type-default-bug-color;
+}
+.pokemon-card.dark {
+    background-color: $type-default-dark-color;
+}
+
+.pokemon-card.dragon {
+    background-color: $type-default-dragon-color;
+}
+
+.pokemon-card.electric {
+    background-color: $type-default-electric-color;
+}
+
+.pokemon-card.fairy {
+    background-color: $type-default-fairy-color;
+}
+
+.pokemon-card.fighting {
+    background-color: $type-default-fighting-color;
+}
+
+.pokemon-card.fire {
+    background-color: $type-default-fire-color;
+}
+
+.pokemon-card.flying {
+    background-color: $type-default-flying-color;
+}
+
+.pokemon-card.ghost {
+    background-color: $type-default-ghost-color;
+}
+
+.pokemon-card.normal {
+    background-color: $type-default-normal-color;
+}
+
+.pokemon-card.grass {
+    background-color: $type-default-grass-color;
+}
+
+.pokemon-card.ground {
+    background-color: $type-default-ground-color;
+}
+
+.pokemon-card.ice {
+    background-color: $type-default-ice-color;
+}
+
+.pokemon-card.poison {
+    background-color: $type-default-poison-color;
+}
+
+.pokemon-card.psychic {
+    background-color: $type-default-psychic-color;
+}
+
+.pokemon-card.rock {
+    background-color: $type-default-rock-color;
+}
+
+.pokemon-card.steel {
+    background-color: $type-default-steel-color;
+}
+
+.pokemon-card.water {
+    background-color: $type-default-water-color;
+}
+
+.pokemon-type.bug {
+    background-color: $type-default-bug-background;
+}
+.pokemon-type.dark {
+    background-color: $type-default-dark-background;
+}
+.pokemon-type.dragon {
+    background-color: $type-default-dragon-background;
+}
+.pokemon-type.electric {
+    background-color: $type-default-electric-background;
+}
+.pokemon-type.fairy {
+    background-color: $type-default-fairy-background;
+}
+.pokemon-type.fighting {
+    background-color: $type-default-fighting-background;
+}
+.pokemon-type.fire {
+    background-color: $type-default-fire-background;
+}
+.pokemon-type.flying {
+    background-color: $type-default-flying-background;
+}
+.pokemon-type.ghost {
+    background-color: $type-default-ghost-background;
+}
+.pokemon-type.normal {
+    background-color: $type-default-normal-background;
+}
+.pokemon-type.grass {
+    background-color: $type-default-grass-background;
+}
+.pokemon-type.ground {
+    background-color: $type-default-ground-background;
+}
+.pokemon-type.ice {
+    background-color: $type-default-ice-background;
+}
+.pokemon-type.poison {
+    background-color: $type-default-poison-background;
+}
+.pokemon-type.psychic {
+    background-color: $type-default-psychic-background;
+}
+.pokemon-type.rock {
+    background-color: $type-default-rock-background;
+}
+.pokemon-type.steel {
+    background-color: $type-default-steel-background;
+}
+.pokemon-type.water {
+    background-color: $type-default-water-background;
 }

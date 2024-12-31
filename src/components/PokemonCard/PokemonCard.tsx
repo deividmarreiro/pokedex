@@ -8,16 +8,34 @@ interface PokemonCardProps {
 
 function PokemonCard({ pokemon }: PokemonCardProps) {
     return (
-        <div className="pokemon-card">
-            <div className="pokemon-card-header">
-                <span className="pokemon-id">{pokemon.id}</span>
+        <div className={`pokemon-card ${pokemon.types[0].type.name}`}>
+            <div className="pokemon-info">
+                <h2 className="pokemon-name">{pokemon.name}</h2>
+                <p className="pokemon-national-number">{`#${String(
+                    pokemon.id
+                ).padStart(3, "0")}`}</p>
+                <ul className="pokemon-types">
+                    {pokemon.types.map((typeObj) => (
+                        <li
+                            key={typeObj.slot}
+                            className={`pokemon-type ${typeObj.type.name}`}
+                        >
+                            <div className="type-icon-container">
+                                <img
+                                    src={`/images/types-icons/${typeObj.type.name}.svg`}
+                                />
+                            </div>
+                            {typeObj.type.name}
+                        </li>
+                    ))}
+                </ul>
             </div>
-            <div className="pokemon-image">
-                <img src={pokemon.image} alt={pokemon.name} />
-            </div>
-            <div className="pokemon-card-footer">
-                <span className="pokemon-name">{pokemon.name}</span>
-            </div>
+            <img
+                className="pokemon-image"
+                src={pokemon.image}
+                alt={pokemon.name}
+                loading="lazy"
+            />
         </div>
     );
 }
